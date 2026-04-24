@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --surface: 255 255 255;
+    --surface-muted: 248 250 252;
+    --border: 226 232 240;
+    --text: 15 23 42;
+    --text-muted: 71 85 105;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --surface: 2 6 23;
+    --surface-muted: 15 23 42;
+    --border: 51 65 85;
+    --text: 226 232 240;
+    --text-muted: 148 163 184;
+  }
+
+  * {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+    background-image: radial-gradient(circle at top left, rgba(54, 181, 255, 0.12), transparent 30%),
+      radial-gradient(circle at 80% 0%, rgba(16, 185, 129, 0.1), transparent 22%);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+
+  ::selection {
+    @apply bg-sky-200 text-slate-950;
+  }
+}
+
+@layer components {
+  .app-panel {
+    @apply rounded-3xl border border-white/40 bg-white/75 shadow-panel backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/70;
+  }
+
+  .control-input {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 transition focus:border-brand-400 focus:ring-2 focus:ring-brand-200 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-brand-500 dark:focus:ring-brand-900/40;
+  }
+
+  .field-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400;
+  }
+}
+
+.react-flow__panel {
+  margin: 0;
+}
+
+.react-flow__controls {
+  @apply overflow-hidden rounded-2xl border border-white/40 bg-white/80 shadow-panel backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/90;
+}
+
+.react-flow__controls-button {
+  @apply border-slate-200 bg-transparent text-slate-700 dark:border-slate-700 dark:text-slate-200;
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__minimap {
+  @apply overflow-hidden rounded-2xl border border-white/40 bg-white/80 shadow-panel backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/90;
+}
+
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.5) transparent;
+}
