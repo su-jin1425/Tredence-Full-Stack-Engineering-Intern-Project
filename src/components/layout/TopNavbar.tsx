@@ -35,11 +35,16 @@ export const TopNavbar = ({
 }: TopNavbarProps) => (
   <header className="app-panel mx-4 mt-4 flex flex-col gap-4 px-5 py-4 lg:flex-row lg:items-center lg:justify-between">
     <div className="flex items-start gap-4">
-      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-400 to-emerald-400 text-lg font-bold text-white">
-        HR
-      </div>
       <div>
-        <p className="font-display text-xl font-semibold">HR Workflow Designer Module</p>
+        <p className="font-display text-xl font-semibold">
+          <a 
+          href="https://sujith1425.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:underline">
+            HR Workflow Designer Module By Sujith S
+            </a>
+        </p>
         <p className="text-sm text-slate-500 dark:text-slate-400">
           Design, validate, simulate, and version internal HR automations from one canvas.
         </p>
