@@ -83,9 +83,9 @@ export const WorkflowCanvas = () => {
           onConnect={connectNodes}
           onNodeDragStart={beginInteraction}
           onNodeDragStop={() => commitInteraction('Move node')}
-          onSelectionChange={({ nodes: selectedNodes }) => selectNode(selectedNodes[0]?.id ?? null)}
+          onSelectionChange={(selection) => selectNode(selection?.nodes[0]?.id ?? null)}
           onPaneClick={() => selectNode(null)}
-          fitView
+          fitView={nodes.length > 0}
           deleteKeyCode={['Delete', 'Backspace']}
           proOptions={{ hideAttribution: true }}
           defaultEdgeOptions={{
