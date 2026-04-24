@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --require ./scripts/vite-crypto-shim.cjs ./node_modules/vite/bin/vite.js",
-    "build": "tsc --noEmit && node --require ./scripts/vite-crypto-shim.cjs ./node_modules/vite/bin/vite.js build",
-    "preview": "node --require ./scripts/vite-crypto-shim.cjs ./node_modules/vite/bin/vite.js preview",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --max-warnings 0"
   },
   "dependencies": {
